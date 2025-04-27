@@ -1,0 +1,98 @@
+Zabardast!
+Yeh raha tumhara fresh, ready-to-paste index.html code:
+(Just copy pura ka pura aur Github pe index.html file bana ke paste kar dena.)
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Anniversary Bhai & Bhabhi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            font-size: 2em;
+            padding: 20px;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .show {
+            display: flex;
+            animation: fade 2s;
+        }
+        @keyframes fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide show">
+    <div>Apki Muskan Aur Manii</div>
+</div>
+
+<div class="slide">
+    <div>Ik aisi Jodi Jin ka din late shuru hota aur pizza party pe khatm hota! <br> <small>(No offense!)</small></div>
+</div>
+
+<div class="slide">
+    <div>Love Infinite! <span class="heart">❤️</span></div>
+</div>
+
+<div class="slide">
+    <div>Uthne ke baad seedha Nashta karne chalte hain, shopping ko skip karke! <span class="heart">❤️</span></div>
+</div>
+
+<div class="slide">
+    <div>Stay by my side... Stay by my side always. <br> As you know, flowers only bloom when love and support is given. <span class="heart">❤️</span></div>
+</div>
+
+<div class="slide">
+    <div><strong>Happy Anniversary Bhai & Bhabhi!</strong> <br> From your proud little Manii <span class="heart">❤️</span></div>
+</div>
+
+<audio autoplay loop>
+  <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+</audio>
+
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('show'));
+        slides[index].classList.add('show');
+    }
+
+    setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 4000); // 4 seconds per slide
+</script>
+
+</body>
+</html>
